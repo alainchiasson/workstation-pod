@@ -8,7 +8,7 @@ cd "$( dirname "${BASH_SOURCE[0]}" )"
 kubectl get pods -l type=workstation
 
 # Watch for state changes when deployed
-kubectl exec $( kubectl get pods -o jsonpath='{.items[*].metadata.name}' -l type=workstation ) /bin/bash
+kubectl exec -it $( kubectl get pods -o jsonpath='{.items[*].metadata.name}' -l type=workstation ) /bin/bash
 
 #
 echo "Disconnected"
