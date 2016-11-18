@@ -46,3 +46,4 @@ mind but are not essential:
 - Installable scripts for management
 - Using the API instead of kubectl for control
 - Figure out how to place MOTD when connecting
+- Try automate things using git hooks and merge requests
