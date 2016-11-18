@@ -1,0 +1,5 @@
+#!/bin/bash
+set -ex
+
+# system packages
+xargs yum install -y < /build/rpmlist

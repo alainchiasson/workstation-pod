@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+# cd to where build script is located
+# allows easy predictable paths everywhere in build chain
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+
+# Watch for state changes when destroyed
+kubectl get pods,deployments,rs -l type=workstation

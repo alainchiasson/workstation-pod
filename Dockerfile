@@ -5,9 +5,13 @@ FROM centos:7
 
 # Add the following repo :
 # Install the following commands : ss ip nmap
-
-RUN yum install -y iproute\
-                   nmap\
-                   tcpdump
-
+RUN mkdir /build
+ADD ./files-build/ /build/
+RUN chmod --recursive go-rwx /build
+RUN /bin/bash /build/prepare
 RUN yum update
+
+# keep your container alive until stop is sent. Using trap and
+# wait will make your container react immediately.
+
+CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
