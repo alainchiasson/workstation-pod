@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+# cd to where build script is located
+# allows easy predictable paths everywhere in build chain
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+
+# Figure out how to get the release tag.
+#
+# And start labeling based on git tags and branch /1, /1.1, /2
+docker push alainchiasson/workstation-pod:latest
