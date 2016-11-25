@@ -3,3 +3,4 @@ nmap
 tcpdump
 bind-utils
 mariadb
+jq

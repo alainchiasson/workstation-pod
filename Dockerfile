@@ -8,6 +8,7 @@ FROM centos:7
 RUN mkdir /build
 ADD ./files-build/ /build/
 RUN chmod --recursive go-rwx /build
+RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-8.noarch.rpm
 RUN /bin/bash /build/prepare
 RUN yum update
 
