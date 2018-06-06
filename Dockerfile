@@ -8,6 +8,7 @@ FROM centos:7
 RUN mkdir /build
 ADD ./files-build/ /build/
 RUN chmod --recursive go-rwx /build
+RUN yum install -y epel-release
 RUN /bin/bash /build/prepare
 RUN yum update
 
