@@ -4,3 +4,4 @@ tcpdump
 bind-utils
 mariadb
 jq
+net-snmp
