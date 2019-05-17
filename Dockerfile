@@ -9,8 +9,8 @@ RUN mkdir /build
 ADD ./files-build/ /build/
 RUN chmod --recursive go-rwx /build
 RUN yum install -y epel-release
+RUN yum update -y
 RUN /bin/bash /build/prepare
-RUN yum update
 
 # keep your container alive until stop is sent. Using trap and
 # wait will make your container react immediately.
