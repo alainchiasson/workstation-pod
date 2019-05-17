@@ -6,3 +6,4 @@ mariadb
 jq
 net-snmp
 openssh-clients
+net-snmp-utils
