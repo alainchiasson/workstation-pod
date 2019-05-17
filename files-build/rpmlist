@@ -5,4 +5,5 @@ bind-utils
 mariadb
 jq
 net-snmp
+openssh-clients
 net-snmp-utils
